@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content = "ie-edge" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Vending Machine</title>
+</head>
+<body>
+  
+  <div class="center">
+    <h1>Vending Machine</h1>
+    <br/>
+    <form>
+        <span><img src="5rand.jpg" height="50" width="50" alt="50c"></span> 
+        <input type ="text" name = "R5" id="five" placeholder="0" value="" oninput="tally()" />
+        
+        <span><img src="2rand.jpg" height="50" width="50" alt="50c"></span> 
+        <input type ="text" name = "R2" id="two" placeholder="0" value="" oninput="tally()"/>
+        
+        <span><img src="1rand.jpg" height="50" width="50" alt="50c"></span> 
+        <input type ="text" name = "R1" id="one" placeholder="0" value="" oninput="tally()" />
+        
+        <span><img src="50cents.jpg" height="50" width="50" alt="50c"></span> 
+        <input type = "text" name = "50c" id="fifty" placeholder="0" value="" oninput="tally()" />
+        
+    </form>
+    <br/>
+    <div class="container">
+      
+        
+            <table class="table-bordered">
+              <table style="width:60%">
+              <thead>
+                <tr>
+                  <th scope="col">Soda</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Press to make selection</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  
+                  <td><img src = "coke.jpg" height = "150" width = "150"/></td>
+                  <td>R18.00</td>
+                  <td id = "cokeQuantity" value="coke1">10</td>
+                  <td><button class = "button button1"value = "Coke" id = "coke" onclick = "dispenseSoda(0)">Coke</button></td>
+                  </tr>
+                  <tr>
+                  
+                    <td><img src = "7up.jpg" height = "150" width = "150"/></td>
+                    <td>R16.50</td>
+                    <td id = "7upQuantity" value ="7up1">10</td>
+                    <td><button class = "button button2"value = "7-Up" id = "7up" onclick = "dispenseSoda(1)">7-Up</button></td>
+                    </tr>
+                    <tr>
+                  
+                      <td><img src = "fanta.png" height = "150" width = "150"/></td>
+                      <td>R17.50</td>
+                      <td id = "fantaQuantity" value ="fanta1">10</td>
+                      <td><button class = "button button3" value = "Fanta" id = "fanta" onclick = "dispenseSoda(2)">Fanta</button></td>
+                      </tr>
+                      <tr>
+                  
+                        <td><img src = "pepsi.jpg" height = "150" width = "150"/></td>
+                        <td>R17.50</td>
+                        <td id = "pepsiQuantity" value ="pepsi1">10</td>
+                        <td style="text-align:center"><button class = "button button4" value = "Pepsi" id = "pepsi" onclick = "dispenseSoda(3)">Pepsi</button></td>
+                        </tr>
+                        </tbody>
+              
+            
+                      </div>
+
+    <br/>
+    <div class = "cent">
+      <div class = "cont">
+      <button class = "button button5"value = "Cancel" id = "cancel" onclick= "cancel()">
+      <span>Cancel</span></button>
+    
+      <button class = "button button6"value = "Refresh" id = "refresh" onclick= "refresh()">
+      <span>Refresh</span></button>
+    
+    <h2>Total Entered: R<span id = "paid">0.00</span></h2> 
+    <h2 id ="message">Insert money then select a Soda</h2>
+    </dic>
+    <script src = "vending.js"></script>
+    </div>
+  </div>
+
+</body>
+</html> 
