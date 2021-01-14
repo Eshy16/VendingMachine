@@ -115,7 +115,7 @@ function dispenseSoda(soda){
 
     change = calculateChange();
     
-    if(change < 0){
+    if(change <= 0){
         msg = "Insufficient Funds, Please try again R"
          + totalPaid.toFixed(2) +
          "has been returned to the coin dispenser";
